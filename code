@@ -1,0 +1,16 @@
+public function makeReservation($isAvailable, $time)
+{
+    if(!$isAvailable)
+    {
+        return "You are not available for this time";
+    } else
+    {
+      if(!$time->isValid())
+      {
+           return "You reserved successfully";
+      } else
+      {
+           return "Time is not valid!";
+      }
+    }
+}
